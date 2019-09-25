@@ -1,6 +1,6 @@
 {
   "name": "we-moved",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Landing page saying the application has moved",
   "main": "index.js",
   "dependencies": {
