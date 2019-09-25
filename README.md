@@ -9,7 +9,7 @@ const startApp = require('we-moved')
 
 const config = {
   pageTitle: 'We Moved!',
-  appName: 'MOA'
+  appName: 'My app name'
 }
 
 startApp(config)

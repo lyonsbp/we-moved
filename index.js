@@ -1,12 +1,13 @@
+const path = require('path')
 const express = require("express");
 const app = express();
 const port = 8080;
 
-function startApp({ pageTitle, appName }) {
-  app.set('views', './views')
+function startApp({ pageTitle, appName, link }) {
+  app.set('views', path.join(__dirname, '/views'))
   app.set("view engine", "pug");
   app.get("/index.html", (req, res) => {
-    res.render("index", { pageTitle, appName });
+    res.render("index", { pageTitle, appName, link });
   });
 
   app.get("*", (req, res) => res.redirect("/index.html"));
