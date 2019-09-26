@@ -4,7 +4,65 @@ html
     meta(charset="UTF-8")
     title= title
   body
-    h1 We Moved!
-    p 
-      #{appName} has moved to a new location! The new appliation can be found at 
-      a(href=link)  #{link}.
+    .container
+      .container--topbar
+        h3(id="topbar--title") #{appName}
+      hr(class="separator")
+      .container--body
+        h1(class="app--heading") #{appName} has moved.
+        p 
+          | Please visit
+          a(href=link)  #{link} 
+          | and bookmark the page for future use of the application.
+      .container--action
+        button Go to Application
+    script.
+      document
+        .querySelector('.container--action button')
+        .addEventListener('click', e => { window.location.href='#{link}'})
+  style.
+    body {
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+    }
+    .container {
+      background-color: white;
+      max-width: 800px;
+      min-height: 320px;
+      padding-bottom: 2em;
+      border: 2px solid #c5c5c5;
+    }
+    .container--topbar {
+      background-color: #061926;
+      color: #CFDCE6;
+      padding: 1em;
+    }
+    .container--body {
+      padding: 1em;
+      text-align: left;
+    }
+    .container--action {
+      text-align: center;
+    }
+    .container--action button {
+      background-color: #0077CC;
+      color: white;
+      height: 25px;
+      margin-top: 1em;
+      padding: 5px 10px 5px 10px;
+      text-align: center;
+    }
+    #topbar--title {
+      font-weight: 100;
+    }
+    .separator {
+      background-color: turquoise;
+      height: 10px;
+      margin-top: 0;
+    }
+    .app--heading {
+      font-weight: 100;
+    }
