@@ -16,17 +16,24 @@ html
           | and bookmark the page for future use of the application.
       .container--action
         button Go to Application
+
     script.
       document
         .querySelector('.container--action button')
         .addEventListener('click', e => { window.location.href='#{link}'})
+
   style.
+    @font-face {
+      font-family: 'GE Inspira Sans';
+      src: url('https://github.com/PredixDev/px-design-stencils/blob/master/px_ui_fonts/GE%20Inspira%20Sans/Web%20(multiple%20formats)/WOFF2/GEInspiraSans.woff2?raw=true');
+    }
     body {
-      background-color: #f2f2f2;
+      background-color: #DFE6EA;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 90vh;
+      font-family: "GE Inspira Sans"
     }
     .container {
       background-color: white;
@@ -36,32 +43,33 @@ html
       border: 2px solid #c5c5c5;
     }
     .container--topbar {
-      background-color: #061926;
+      background-color: #0C1419;
       color: #CFDCE6;
-      padding: 1em;
+      padding: 1em 2em;
     }
     .container--body {
-      padding: 1em;
+      padding: 1em 2em;
       text-align: left;
     }
     .container--action {
       text-align: center;
     }
     .container--action button {
-      background-color: #0077CC;
+      background-color: #008FD6;
       color: white;
-      height: 25px;
       margin-top: 1em;
-      padding: 5px 10px 5px 10px;
-      text-align: center;
+      border: none;
+      padding: 0.5em 1.25em;
+      font-size: 13px;
     }
     #topbar--title {
-      font-weight: 100;
+      font-weight: lighter;
     }
     .separator {
-      background-color: turquoise;
+      background-color: #09819C;
       height: 10px;
       margin-top: 0;
+      border: none;
     }
     .app--heading {
       font-weight: 100;

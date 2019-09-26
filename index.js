@@ -15,4 +15,10 @@ function startApp({ pageTitle, appName, link }) {
   app.listen(port, () => console.log(`App listening on port: ${port}`));
 }
 
+startApp({
+  pageTitle: 'We Moved!',
+  appName: 'MRO Fulfillment Operations Advisor',
+  link: 'https://moa.av.ge.com'
+})
+
 module.exports = startApp
